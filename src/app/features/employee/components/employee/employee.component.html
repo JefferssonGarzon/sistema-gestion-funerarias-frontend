@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<mat-drawer-container class="example-container ">
+    <mat-drawer mode="side" opened class="options" disableClose="true">
+        <ul class="nav flex-column text-center">
+            <li class="nav-item opt-li">
+                <a class="nav-link p-4 active opt-link" routerLink="/admin/employees">Usuarios</a>
+            </li>
+            <li class="nav-item opt-li">
+                <a class="nav-link p-4 active opt-link" routerLink="/admin/employees">Planes</a>
+            </li>
+            <li class="nav-item opt-li">
+                <a class="nav-link p-4 active opt-link" routerLink="/admin/employees">Productos</a>
+            </li>
+            <li class="nav-item opt-li">
+                <a class="nav-link p-4 active opt-link" routerLink="/admin/employees">Servicios</a>
+            </li>
+            <li class="nav-item opt-li">
+                <a class="nav-link p-4 active opt-link" routerLink="/admin/employees">Solicitudes</a>
+            </li>
+            <li class="nav-item opt-li">
+                <a class="nav-link p-4 active opt-link" routerLink="/admin/employees">Noticias</a>
+            </li>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

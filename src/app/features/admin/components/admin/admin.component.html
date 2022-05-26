@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<mat-drawer-container class="example-container ">
+    <mat-drawer mode="side" opened class="options" disableClose="true">
+        <ul class="nav flex-column text-center">
+            <li class="nav-item opt-li">
+                <a class="nav-link p-4 active opt-link" routerLink="/admin/employees">Empleados</a>
+            </li>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

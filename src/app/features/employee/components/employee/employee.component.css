@@ -1,0 +1,19 @@
+.example-container {
+    width: 100%;
+    height: 77%
+}
+
+.options{
+    width: 17%;
+}
+
+.opt-link{
+    font-size: large;
+}
+
+.opt-li:hover{
+    background-color: antiquewhite
+}
+
+
+

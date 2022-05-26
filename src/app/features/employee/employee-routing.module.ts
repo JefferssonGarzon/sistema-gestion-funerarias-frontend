@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EmployeeComponent } from './components/employee/employee.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)
+    component: EmployeeComponent
   },
   {
     path: '**',
@@ -14,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class EmployeeRoutingModule { }
