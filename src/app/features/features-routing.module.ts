@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BurialServicesComponent } from '../shared/components/burial-services/burial-services.component';
 import { ProductsComponent } from '../shared/components/products/products.component';
 import { ViewNewsComponent } from '../shared/components/view-news/view-news.component';
+import { SignUpComponent } from './landing/components/sign-up/sign-up.component';
 import { LandingComponent } from './landing/landing.component';
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'services',
         component: BurialServicesComponent
+      },
+      {
+        path: 'sing-up',
+        component: SignUpComponent
       },
       {
         path: '**',

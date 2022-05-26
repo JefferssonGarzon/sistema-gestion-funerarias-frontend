@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand ml-4" href="#">
         S.G.F
     </a>
@@ -25,35 +25,30 @@
             <button class="btn btn-success px-5">
                 Carrito
             </button>
-            <!-- <button class="btn btn-success ml-4 px-5">
-                Login
-            </button> -->
             <button mat-button class="btn btn-success ml-4 px-5" [matMenuTriggerFor]="beforeMenu">Login</button>
             <mat-menu #beforeMenu="matMenu" xPosition="before" class="p-3">
-                <div (click)="$event.stopPropagation();">
-                    <form [formGroup]="loginForm" (ngSubmit)="login()">
-                        <div class="login__username-field login__username-field--required mb-3">
-                            <label for="username">Usuario</label>
-                            <input type="text" class="form-control" formControlName="username" name="username" id="username"
-                                placeholder="Ingrese el usuario">
-                        </div>
-                        <div class="login__password-field login__password-field--required mb-3">
-                            <label for="password">Contraseña</label>
-                            <input type="password" class="form-control" formControlName="password" name="password"
-                                id="password" placeholder="Ingrese la contraseña">
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">
-                            Entrar
-                        </button>
-                    </form>
-                    <div class="text-center mt-2">
-                        <span class="d-block">
-                            No tienes cuenta, <a routerLink="">registrate</a>
-                        </span>
-                        <span>
-                            <a routerLink="">Olvidaste tu contraseña?</a>
-                        </span>
+                <form [formGroup]="loginForm" (ngSubmit)="login()" (click)="$event.stopPropagation();">
+                    <div class="login__username-field login__username-field--required mb-3">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" formControlName="username" name="username" id="username"
+                            placeholder="Ingrese el usuario">
                     </div>
+                    <div class="login__password-field login__password-field--required mb-3">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" formControlName="password" name="password"
+                            id="password" placeholder="Ingrese la contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100" [disabled]="!loginForm.valid">
+                        Entrar
+                    </button>
+                </form>
+                <div class="text-center mt-2">
+                    <span class="d-block">
+                        No tienes cuenta, <a routerLink="/landing/sing-up">registrate</a>
+                    </span>
+                    <span>
+                        <a routerLink="">Olvidaste tu contraseña?</a>
+                    </span>
                 </div>
             </mat-menu>
         </div>

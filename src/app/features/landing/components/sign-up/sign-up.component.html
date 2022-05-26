@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="m-auto">
+        <mat-card>
+            <form [formGroup]="regForm" (ngSubmit)="register()">
+                <div class="row">
+                    <div class="col-md-6 sing-up__username-field sing-up__username-field--required">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" formControlName="username" name="username" id="username"
+                            placeholder="Ingrese el usuario">
+                    </div>
+                    <div class="col-md-6 sign-up__password-field sign-up__password-field--required">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" formControlName="password" name="password" id="password"
+                            placeholder="Ingrese la contraseña">
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <label for="address">Dirección</label>
+                        <input type="text" class="form-control" formControlName="address" name="address" id="address"
+                            placeholder="ingrese su dirección">
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <label for="email">Correo electrónico</label>
+                        <input type="text" class="form-control" formControlName="email" name="email" id="email"
+                            placeholder="ingrese su correo">
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <label for="name">Nombres</label>
+                        <input type="text" class="form-control" formControlName="name" name="name" id="name"
+                            placeholder="ingrese su(s) nombre(s)">
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <label for="lastname">Apellidos</label>
+                        <input type="text" class="form-control" formControlName="lastname" name="lastname" id="lastname"
+                            placeholder="ingrese sus apellidos">
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <label for="id">Doc. identidad</label>
+                        <input type="text" class="form-control" formControlName="id" name="id" id="id"
+                            placeholder="ingrese su documento">
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <!-- <label for="lastname">Fecha de nacimiento</label>
+                        <input type="text" class="form-control" formControlName="lastname" name="lastname" id="lastname"
+                            placeholder="ingrese sus apellidos"> -->
+                        <mat-form-field appearance="fill">
+                            <mat-label>Fecha de nacimiento</mat-label>
+                            <input matInput class="form-control" formControlName="datebirth" [matDatepicker]="picker">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-4 w-100" [disabled]="!regForm.valid">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </mat-card>
+
+    </div>
+</div>
