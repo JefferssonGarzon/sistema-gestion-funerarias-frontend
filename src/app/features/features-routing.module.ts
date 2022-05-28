@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BurialServicesComponent } from '../shared/components/burial-services/burial-services.component';
 import { ProductsComponent } from '../shared/components/products/products.component';
 import { ViewNewsComponent } from '../shared/components/view-news/view-news.component';
+import { ForgotPasswordComponent } from './landing/components/forgot-password/forgot-password.component';
 import { SignUpComponent } from './landing/components/sign-up/sign-up.component';
 import { LandingComponent } from './landing/landing.component';
 
@@ -28,6 +29,10 @@ const routes: Routes = [
         component: SignUpComponent
       },
       {
+        path: 'forgot-password',
+        component: ForgotPasswordComponent
+      },
+      {
         path: '**',
         redirectTo: 'landing/news',
         pathMatch: 'full'
@@ -41,6 +46,10 @@ const routes: Routes = [
   {
     path: 'employee',
     loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)
+  },
+  {
+    path: 'customer',
+    loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule)
   },
   {
     path: '**',

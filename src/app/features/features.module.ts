@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -12,17 +12,20 @@ import {MatInputModule} from '@angular/material/input';
 
 import { LandingComponent } from './landing/landing.component';
 import { SignUpComponent } from './landing/components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './landing/components/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
     LandingComponent,
     SignUpComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     CommonModule, 
     FeaturesRoutingModule, 
     SharedModule,
     MatCardModule,
+    FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
     MatFormFieldModule,

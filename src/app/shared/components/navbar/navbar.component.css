@@ -1,3 +1,7 @@
 .navbar{
     height: 10vh;
 }
+
+.navbar-nav{
+    font-size: medium;
+}
