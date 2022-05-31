@@ -3,16 +3,20 @@
     height: 80vh;
 }
 
+.active{
+    background-color: blanchedalmond;
+}
+
+.active > a{
+    color: aliceblue;
+}
+
 .options{
     width: 17%;
 }
 
 .opt-link{
     font-size: large;
-}
-
-.opt-li:hover{
-    background-color: antiquewhite
 }
 
 

@@ -2,20 +2,10 @@
 <mat-drawer-container class="example-container ">
     <mat-drawer mode="side" opened class="options" disableClose="true">
         <ul class="nav flex-column text-center">
-            <li class="nav-item opt-li">
-                <a class="nav-link p-4 active opt-link" routerLink="/customer/my-profile">Mi perfil</a>
-            </li>
-            <li class="nav-item opt-li">
-                <a class="nav-link p-4 active opt-link" routerLink="/customer/my-plans">Mis planes</a>
-            </li>
-            <li class="nav-item opt-li">
-                <a class="nav-link p-4 active opt-link" routerLink="/customer/my-burial-services">Mis servicios</a>
-            </li>
-            <li class="nav-item opt-li">
-                <a class="nav-link p-4 active opt-link" routerLink="/customer/my-requests">Mis solicitudes</a>
-            </li>
-            <li class="nav-item opt-li">
-                <a class="nav-link p-4 active opt-link" routerLink="/landing">Cerrar sesion</a>
+            <li class="nav-item opt-li" *ngFor="let item of templateMenu">
+                <a class="nav-link p-4 opt-link" [routerLink]="[item.path]" routerLinkActive="active">
+                    {{ item.text }}
+                </a>
             </li>
         </ul>
     </mat-drawer>

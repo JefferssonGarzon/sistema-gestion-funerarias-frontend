@@ -3,6 +3,10 @@
     height: 80vh;
 }
 
+.active{
+    background-color: blanchedalmond;
+}
+
 .options{
     width: 17%;
 }
