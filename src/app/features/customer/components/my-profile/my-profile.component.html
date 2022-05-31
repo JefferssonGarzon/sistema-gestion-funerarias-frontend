@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="abs-center">
+        <mat-card class="align-middle" style="background-color: azure;">
+            <div class="row px-5">
+                <div class="col-12 text-center">
+                    <img class="my-4" src="../../../../../assets/img/profile.png" style="width: 50px; height: 50px;" alt="profile">
+                </div>
+                <form [formGroup]="myProfileForm">
+                    <div class="row">
+                        <div class="col-6 mb-4">
+                            <label for="name">Nombres</label>
+                            <input type="text" class="form-control" formControlName="name" name="name" id="name"
+                                placeholder="nombres">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="lastname">Apellidos</label>
+                            <input type="text" class="form-control" formControlName="lastname" name="lastname"
+                                id="lastname" placeholder="apellidos">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="dateofbirth">Fecha de nacimiento</label>
+                            <input type="text" class="form-control" formControlName="dateofbirth" name="dateofbirth"
+                                id="dateofbirth" placeholder="fecha de nacimiento">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" formControlName="email" name="email" id="email"
+                                placeholder="correo">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="doc">Documento de identidad</label>
+                            <input type="text" class="form-control" formControlName="doc" name="doc" id="doc"
+                                placeholder="identificación">
+                        </div>
+                        <div class="col-6 mb-5">
+                            <label for="address">Dirección</label>
+                            <input type="text" class="form-control" formControlName="address" name="address"
+                                id="address" placeholder="identificación">
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-success mb-3" style="width: 25%;">
+                                Editar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</div>

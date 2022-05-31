@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3>Crear / Editar Servicio</h3>
+            <mat-divider></mat-divider>
+        </div>
+        <div class="col-12 my-3">
+            <form [formGroup]="serviceForm">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="my-3">
+                            <label for="service">Nombre del servicio</label>
+                            <input type="text" class="form-control" formControlName="service" name="service"
+                                id="service" placeholder="ingrese nombre del servicio">
+                        </div>
+                        <div class="my-3">
+                            <label for="price">Precio</label>
+                            <input type="text" class="form-control" formControlName="price" name="price" id="price"
+                                placeholder="ingrese el precio">
+                        </div>
+                        <div class="my-3">
+                            <label for="image">URL imagen</label>
+                            <input type="text" class="form-control" formControlName="image" name="image" id="image"
+                                placeholder="ingrese la URL">
+                        </div>
+                        <div class="my-3">
+                            <label for="description">Descripción</label>
+                            <input type="text" class="form-control" style="height: 100px;" formControlName="description"
+                                name="description" id="description" placeholder="ingrese una descripción">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="my-3">
+                            <label for="image">Imagen</label>
+                            <img src="../../../../../assets/img/img_not_found.png" style="width: 100%; height: 100%;"
+                                alt="img_not_found">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-end mt-3">
+                    <div class="col-4">
+                        <button mat-dialog-close class="btn btn-warning mr-3">
+                            Cancelar
+                        </button>
+                        <button mat-dialog-close class="btn btn-success">
+                            Guardar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

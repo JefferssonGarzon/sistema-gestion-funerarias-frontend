@@ -13,7 +13,7 @@ import { ListEmployeesComponent } from './components/list-employees/list-employe
 @NgModule({
   declarations: [
     AdminComponent,
-    ListEmployeesComponent
+    ListEmployeesComponent,
   ],
   imports: [
     CommonModule,

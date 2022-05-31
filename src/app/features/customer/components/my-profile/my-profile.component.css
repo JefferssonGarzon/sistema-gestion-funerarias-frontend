@@ -1,0 +1,25 @@
+.container{
+    height: 80vh;
+}
+
+.titles{
+    font-size: large;
+}
+
+mat-card{
+    width: 90%;
+}
+
+label{
+    font-size: medium;
+}
+.abs-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+button{
+    font-size: medium;
+}
