@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -13,6 +14,7 @@ import { BurialServicesComponent } from './components/burial-services/burial-ser
 import { PlansComponent } from './components/plans/plans.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ViewNewsComponent } from './components/view-news/view-news.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -23,12 +25,14 @@ import { ViewNewsComponent } from './components/view-news/view-news.component';
     PlansComponent,
     ProductsComponent,
     ViewNewsComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
     MatMenuModule,
     MatCardModule,
+    MatDividerModule,
     ReactiveFormsModule,
   ],
   exports: [
@@ -38,6 +42,7 @@ import { ViewNewsComponent } from './components/view-news/view-news.component';
     PlansComponent,
     ProductsComponent,
     ViewNewsComponent,
+    ShoppingCartComponent,
   ],
 })
 export class SharedModule { }

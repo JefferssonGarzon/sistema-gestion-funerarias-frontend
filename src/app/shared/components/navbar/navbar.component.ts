@@ -8,6 +8,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class NavbarComponent implements OnInit {
 
+  isVisitor:boolean = true;
+  enabledEmployee:boolean = false;
+  enabledCustomer:boolean = false;
+  enabledAdmin:boolean = false;
+
   loginForm!: FormGroup;
   constructor(private fb: FormBuilder) { }
 

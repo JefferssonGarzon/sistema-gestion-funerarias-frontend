@@ -6,51 +6,58 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <ng-template>
+
+    </ng-template>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Planes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Servicios</a>
-            </li>
-        </ul>
+        <div *ngIf="(enabledCustomer || isVisitor) && !(enabledAdmin || enabledEmployee)">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customer/news">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customer/plans">Planes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customer/products">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customer/services">Servicios</a>
+                </li>
+            </ul>
+        </div>
         <div class="mx-5">
-            <button class="btn btn-success px-5">
+            <button *ngIf="enabledCustomer || isVisitor" class="btn btn-success px-5" routerLink="/landing/shopping-cart">
                 Carrito
             </button>
-            <button mat-button class="btn btn-success ml-4 px-5" [matMenuTriggerFor]="beforeMenu">Login</button>
-            <mat-menu #beforeMenu="matMenu" xPosition="before" class="p-3">
-                <form [formGroup]="loginForm" (ngSubmit)="login()" (click)="$event.stopPropagation();">
-                    <div class="login__username-field login__username-field--required mb-3">
-                        <label for="username">Usuario</label>
-                        <input type="text" class="form-control" formControlName="username" name="username" id="username"
-                            placeholder="Ingrese el usuario">
+            <ng-container *ngIf="isVisitor">
+                <button mat-button class="btn btn-success ml-4 px-5" [matMenuTriggerFor]="beforeMenu">Login</button>
+                <mat-menu #beforeMenu="matMenu" xPosition="before" class="p-3">
+                    <form [formGroup]="loginForm" (ngSubmit)="login()" (click)="$event.stopPropagation();">
+                        <div class="login__username-field login__username-field--required mb-3">
+                            <label for="username">Usuario</label>
+                            <input type="text" class="form-control" formControlName="username" name="username"
+                                id="username" placeholder="Ingrese el usuario">
+                        </div>
+                        <div class="login__password-field login__password-field--required mb-3">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" formControlName="password" name="password"
+                                id="password" placeholder="Ingrese la contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100" [disabled]="!loginForm.valid">
+                            Entrar
+                        </button>
+                    </form>
+                    <div class="text-center mt-2">
+                        <span class="d-block">
+                            No tienes cuenta, <a routerLink="/landing/sing-up">registrate</a>
+                        </span>
+                        <span>
+                            <a routerLink="/landing/forgot-password">Olvidaste tu contraseña?</a>
+                        </span>
                     </div>
-                    <div class="login__password-field login__password-field--required mb-3">
-                        <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" formControlName="password" name="password"
-                            id="password" placeholder="Ingrese la contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-success w-100" [disabled]="!loginForm.valid">
-                        Entrar
-                    </button>
-                </form>
-                <div class="text-center mt-2">
-                    <span class="d-block">
-                        No tienes cuenta, <a routerLink="/landing/sing-up">registrate</a>
-                    </span>
-                    <span>
-                        <a routerLink="/landing/forgot-password">Olvidaste tu contraseña?</a>
-                    </span>
-                </div>
-            </mat-menu>
+                </mat-menu>
+            </ng-container>
         </div>
     </div>
 </nav>
