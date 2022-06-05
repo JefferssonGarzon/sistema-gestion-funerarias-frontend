@@ -1,7 +1,52 @@
 <div class="container">
     <div class="abs-center">
-        <mat-card class="w-100 align-middle" style="background-color: azure;">
-            Shopping Cart
+        <mat-card class="w-100 align-middle card" style="background-color: azure;">
+            <div class="container">
+                <h2>Carrito de compras</h2>
+                <mat-divider></mat-divider>
+                <div class="mt-5">
+                    <div class="row">
+                        <div class="col-8">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of productList">
+                                        <th scope="row"> {{ i }} </th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-4">
+                            <mat-card>
+                                <h2><b>Total:</b> $500.000</h2>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-warning" routerLink="/customer/products">
+                                            seguir comprando
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-success">
+                                            proceder con el pago
+                                        </button>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </mat-card>
     </div>
 </div>

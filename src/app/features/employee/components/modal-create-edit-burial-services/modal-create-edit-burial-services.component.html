@@ -36,13 +36,11 @@
                                 alt="img_not_found">
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-end mt-3">
-                    <div class="col-4">
+                    <div class="offset-9 mt-3">
                         <button mat-dialog-close class="btn btn-warning mr-3">
                             Cancelar
                         </button>
-                        <button mat-dialog-close class="btn btn-success">
+                        <button type="submit" [disabled]="!serviceForm.valid" mat-dialog-close class="btn btn-success">
                             Guardar
                         </button>
                     </div>

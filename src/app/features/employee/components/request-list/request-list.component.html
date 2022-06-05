@@ -3,9 +3,42 @@
         <div class="tamanio">
             <input type="text" class="form-control text-center" name="search" id="search" placeholder="buscar...">
             <hr>
-            <mat-card>
-                Tabla
-            </mat-card>
         </div>
     </div>
 </div>
+<mat-card class="m-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="col-0">Id</th>
+                <th scope="col" class="col-2">Tipo de solicitud</th>
+                <th scope="col" class="col-4">Observación</th>
+                <th scope="col" class="col-2">Fecha</th>
+                <th scope="col" class="col-1">Estado</th>
+                <th scope="col" class="col-3"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of iteration">
+                <th scope="row"> {{ i }} </th>
+                <td>Marksadasdadasdasdasdaaaa</td>
+                <td style="width: 70px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime culpa
+                    molestiae, fuga eligendi quo odit quis deleniti, dolorem dicta velit modi laborum? In nulla labore
+                    voluptatibus nobis atque placeat molestias?</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td align="center" class="d-block">
+                    <button class="btn mr-2">
+                        <img src="../../../../../assets/img/actions/accept/1x/baseline_done_black_24dp.png" alt="">
+                    </button>
+                    <button class="btn mr-2">
+                        <img src="../../../../../assets/img/actions/decline/1x/baseline_clear_black_24dp.png" alt="">
+                    </button>
+                    <button class="btn">
+                        <img src="../../../../../assets/img/actions/delete/1x/baseline_delete_black_24dp.png" alt="">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>

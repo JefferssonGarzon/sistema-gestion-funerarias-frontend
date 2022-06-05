@@ -9,6 +9,7 @@ import { ModalCreateEditBurialServicesComponent } from '../modal-create-edit-bur
 })
 export class ListBurialServicesComponent implements OnInit {
 
+  iteration: any[] = [1,2,3,4];
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {

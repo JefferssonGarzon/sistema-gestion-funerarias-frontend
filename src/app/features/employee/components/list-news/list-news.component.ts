@@ -10,6 +10,7 @@ import { ModalCreateEditNewsComponent } from '../modal-create-edit-news/modal-cr
 })
 export class ListNewsComponent implements OnInit {
 
+  iteration: any[] = [1,2,3,4];
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {

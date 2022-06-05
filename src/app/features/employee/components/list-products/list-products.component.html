@@ -6,9 +6,37 @@
                 Añadir producto
             </button>
             <hr>
-            <mat-card>
-                Tabla
-            </mat-card>
         </div>
     </div>
 </div>
+<mat-card class="m-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="col-0">Id</th>
+                <th scope="col" class="col-0">Producto</th>
+                <th scope="col" class="col-4">Descripción</th>
+                <th scope="col" class="col-2">Precio</th>
+                <th scope="col" class="col-2">Estado</th>
+                <th scope="col" class="col-2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of iteration">
+                <th scope="row"> {{ i }} </th>
+                <td>Marksadasdadasdasdasdaaaa</td>
+                <td style="width: 70px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias delectus laborum, ullam repellat consequuntur vero. Sint atque quo laborum vitae doloremque architecto, saepe eveniet excepturi deserunt, temporibus in! Veritatis.</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td align="center" class="d-block">
+                    <button class="btn mr-3">
+                        <img src="../../../../../assets/img/actions/edit/1x/baseline_edit_black_24dp.png" alt="">
+                    </button>
+                    <button class="btn">
+                        <img src="../../../../../assets/img/actions/delete/1x/baseline_delete_black_24dp.png" alt="">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>

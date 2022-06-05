@@ -4,7 +4,32 @@
             <input type="text" class="form-control text-center" name="search" id="search" placeholder="buscar...">
             <hr>
             <mat-card>
-                Tabla
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombres</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Usuarios</th>
+                            <th scope="col">Correo</th>
+                            <!-- <th scope="col"></th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of iteration">
+                            <th scope="row"> {{ i }} </th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <!-- <td>
+                                <button class="btn">
+                                    <img src="../../../../../assets/img/actions/edit/1x/baseline_edit_black_24dp.png" alt="">
+                                </button>
+                            </td> -->
+                        </tr>
+                    </tbody>
+                </table>
             </mat-card>
         </div>
     </div>

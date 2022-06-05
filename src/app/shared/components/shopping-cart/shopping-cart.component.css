@@ -1,5 +1,5 @@
 .container{
-    height: 80vh;
+    height: 100%;
 }
 
 .titles{
@@ -16,8 +16,13 @@ label{
     height: 100%;
 }
 
-mat-card{
+.card{
     height: 90%;
+    overflow-y: auto;
+}
+
+table{
+    width: 100%;
 }
 
 button{

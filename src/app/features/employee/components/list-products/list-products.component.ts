@@ -9,6 +9,7 @@ import { ModalCreateEditProductsComponent } from '../modal-create-edit-products/
 })
 export class ListProductsComponent implements OnInit {
 
+  iteration: any[] = [1,2,3,4];
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {

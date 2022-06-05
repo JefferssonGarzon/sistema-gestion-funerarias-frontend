@@ -9,6 +9,7 @@ import { ModalCreateEditPlansComponent } from '../modal-create-edit-plans/modal-
 })
 export class ListPlansComponent implements OnInit {
 
+  iteration: any[] = [1,2,3,4];
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {

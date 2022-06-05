@@ -6,9 +6,39 @@
                 Añadir noticia
             </button>
             <hr>
-            <mat-card>
-                Tabla
-            </mat-card>
         </div>
     </div>
 </div>
+<mat-card class="m-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="col-0">Id</th>
+                <th scope="col" class="col-2">Noticia</th>
+                <th scope="col" class="col-4">Descripción</th>
+                <th scope="col" class="col-2">Fecha</th>
+                <th scope="col" class="col-1">Estado</th>
+                <th scope="col" class="col-3"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of iteration">
+                <th scope="row"> {{ i }} </th>
+                <td>Marksadasdadasdasdasdaaaa</td>
+                <td style="width: 70px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, ut ab tenetur
+                    consequatur similique explicabo sapiente rerum eius ipsa itaque ullam saepe minus quae nostrum
+                    placeat illum a eos. Nesciunt.</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td align="center" class="d-block">
+                    <button class="btn mr-3">
+                        <img src="../../../../../assets/img/actions/edit/1x/baseline_edit_black_24dp.png" alt="">
+                    </button>
+                    <button class="btn">
+                        <img src="../../../../../assets/img/actions/delete/1x/baseline_delete_black_24dp.png" alt="">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>
